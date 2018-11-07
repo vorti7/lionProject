@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body_block %}
+    <form action = "/posts/update/{{post.id}}">
+    <h1>{{post.id}}</h1>
+    <textarea name="title" id = "title" class="form-control"> {{post.title}} </textarea>
+    <textarea name="content" id = "contnet" class="form-control"> {{post.content}} </textarea>
+    <h1>{{post.time}}</h1>
+    <a href="/posts/{{post.id}}/delete">Delete</a>
+    <a href="/posts/{{post.id}}/edit">Edit</a>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <!--<a href="/posts/{{post.id}}/update">Update</a>-->
+    </form>
+{% endblock %}

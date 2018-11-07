@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body_block %}
+    <form action = "/posts/{{post.id}}/update2" method = "post">
+      <div class="form-group">
+        <label for="title">제목</label>
+        <input type="text" name="title" class="form-control" id="title" value = "{{post.title}}" placeholder="Enter title">
+      </div>
+      <div class="form-group">
+        <label for="content">내용</label>
+        <input type="textarea" name="content" id = "contnet" value = "{{post.content}}" class="form-control"/>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+{% endblock %}
